@@ -5,6 +5,21 @@ Session.setDefault('alertMessage', false);
 
 
 //======================================================
+// define our webcomponent
+
+Template.alertPanel.registerElement('alert-panel');
+
+
+//======================================================
+// global functionality
+
+Template.registerHelper('getCurrentAlert', function(){
+  return Session.get('alertMessage');
+});
+
+
+
+//======================================================
 // alert panel
 
 Template.alertPanel.helpers({
@@ -26,6 +41,7 @@ Template.alertPanel.events({
     Session.set('alertMessage', false);
   }
 });
+
 
 
 

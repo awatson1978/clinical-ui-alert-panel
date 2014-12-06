@@ -9,6 +9,10 @@
       "2.0.3"
     ],
     [
+      "coffeescript",
+      "1.0.4"
+    ],
+    [
       "deps",
       "1.0.5"
     ],
@@ -47,6 +51,10 @@
     [
       "minimongo",
       "1.0.5"
+    ],
+    [
+      "numtel:webcomponent",
+      "0.0.3"
     ],
     [
       "observe-sequence",

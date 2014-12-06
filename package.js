@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'clinical:alert-panel',
-  summary: 'Top-anchored alert panel designed to work with header navbars.',
+  name: 'clinical:ui-alert-panel',
+  summary: 'WebComponent providing alert panel designed to work with header navbars.',
   version: '1.0.0',
-  git: 'http://github.com/awatson1978/clinical-alert-panel.git'
+  git: 'http://github.com/awatson1978/clinical-ui-alert-panel.git'
 });
 
 Package.onUse(function(api) {
@@ -11,6 +11,7 @@ Package.onUse(function(api) {
   api.use('less@1.0.11', 'client');
   api.use('templating@1.0.9', 'client');
   api.use('session@1.0.4', 'client');
+  api.use('numtel:webcomponent@0.0.3', 'client');
 
   api.addFiles('component/alert-panel.less', 'client');
   api.addFiles('component/alert-panel.html', 'client');
