@@ -25,7 +25,7 @@ Package.onTest(function(api) {
   api.use('less');
   api.use('templating');
   api.use('session');
-  api.use('clinical:alert-panel');
+  api.use('clinical:ui-alert-panel');
 
   api.addFiles('alert-panel-tests.js');
 });
