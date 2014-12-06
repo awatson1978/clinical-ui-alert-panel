@@ -1,7 +1,7 @@
 clinical:ui-alert-panel
 ============================
 
-A ClinicalFramework WebComponent providing an alert-panel, designed to work with 50px header navbars.
+A ClinicalFramework WebComponent providing an top-anchored flash alert-panel, designed to work with 50px header navbars.
 
 
 ============================
@@ -68,9 +68,7 @@ As you're wiring up your alerts and making modifications to the alert panel, it'
 
 ````html
 <span>{{getCurrentAlert}}</span>
-<ul>
-{{> toggleAlert }}
-<ul>
+<ul>{{> toggleAlert }}<ul>
 ````
 
 
