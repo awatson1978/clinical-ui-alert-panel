@@ -13,29 +13,65 @@ A ClinicalFramework WebComponent providing an alert-panel, designed to work with
 
 ============================
 #### Installation
-* Pre-Install: [Meteorite](https://github.com/oortcloud/meteorite) to gain the mrt command
-* Add Dropzonejs to your project with:
+
 ```
 meteor add clinical:ui-alert-panel
 ```
 
 ============================
-#### Usage
-In your handlebar templates you can just include the template Dropzonejs:
+#### Document Object Model  
 
-```
-{{> dropzone url='http://somewebsite.com/upload' id='dropzoneDiv'}}
-```
-Which will post any uploaded files to the url of your choice.
+The basic way to adding the webcomponent in is to simply add ``{{> alertPanel}}`` somewhere in your page layout.  The alert panel is designed to work at the root of your application, so it's best to put it in your main layout, rather than in a page or subtemplate.  
+
+````html
+<template name="appLayout">
+<div id="appLayout">
+{{> alertPanel }}
+{{> yield }}
+</div>
+</template>
+````
+
+There's also some experimental support with using polyfills by way of the webcomponentsjs library.  Styling doesn't seem to be currently getting applied to the shadow DOM.  But if you'd like to try out some semantic HTML, you can try the following.  
+
+````html
+<template name="appLayout">
+<div id="appLayout">
+<alert-panel></alert-panel>
+{{> yield }}
+</div>
+</template>
+````
+
 
 ============================
-#### Options
-If you would like more control over your Dropzone. You can instantiate one on any html element and pass a range of events and options.
+#### API
 
-```
-$(selector).dropzone(options);
-window.Dropzone.discover();
-```
+The API is very basic with only two methods to choose from.  
+
+````js
+AlertPanel.announce("You have a message!");
+AlertPanel.close();
+````
+
+You can also access the lower-level data variables
+
+````js
+Session.set('alertMessage', "A new message everybody needs to see.");
+Session.get('alertMessage')
+````
+
+============================
+#### Debugging & Testing Helpers
+
+As you're wiring up your alerts and making modifications to the alert panel, it's sometimes useful to be able to observe the state of the message variable, and to be able to manualy trigger the alert panel.  There are a couple of helper methods to assist you doing that.  
+
+````html
+<span>{{getCurrentAlert}}</span>
+<ul>
+{{> toggleAlert }}
+<ul>
+````
 
 
 ============================
