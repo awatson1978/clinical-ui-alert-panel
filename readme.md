@@ -3,6 +3,8 @@ clinical:ui-alert-panel
 
 A ClinicalFramework WebComponent providing an top-anchored flash alert-panel, designed to work with 50px header navbars.
 
+![screenshot](https://raw.githubusercontent.com/awatson1978/clinical-ui-alert-panel/master/screenshots/screenshot-after.png)  
+
 
 ============================
 #### Meteor Version
