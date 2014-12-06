@@ -1,0 +1,11 @@
+<template name="toggleAlert">
+  <li><a id="toggleAlertLink"><u>T</u>oogle</a></li>
+</template>
+
+<template name="alertPanel">
+  {{#if displayAlert}}
+    <aside id="alertPanel" class="centered alert alert-danger">
+      {{getAlertMessage}}
+    </aside>
+  {{/if}}
+</template>
